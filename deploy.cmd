@@ -88,12 +88,12 @@ goto :EOF
 :Deployment
 echo Handling node.js deployment.
 
-
-
 :: 1. Select node version
+echo 1
 call :SelectNodeVersion
 
 :: 2. Install npm packages
+echo 2
 IF EXIST "%DEPLOYMENT_TARGET%\package.json" (
   pushd "%DEPLOYMENT_TARGET%"
   call :ExecuteCmd !NPM_CMD! install --production
@@ -102,6 +102,7 @@ IF EXIST "%DEPLOYMENT_TARGET%\package.json" (
 )
 
 :: 3. Angular Prod Build
+echo 3
 IF EXIST "%DEPLOYMENT_TARGET%/.angular.json" (
 echo Building App in %DEPLOYMENT_TARGET%…
 pushd "%DEPLOYMENT_TARGET%"
@@ -113,6 +114,7 @@ popd
 )
 
 :: 4. KuduSync
+echo 4
 IF /I "%IN_PLACE_DEPLOYMENT%" NEQ "1" (
   call :ExecuteCmd "%KUDU_SYNC_CMD%" -v 50 -f "%DEPLOYMENT_SOURCE%" -t "%DEPLOYMENT_TARGET%" -n "%NEXT_MANIFEST_PATH%" -p "%PREVIOUS_MANIFEST_PATH%" -i ".git;.hg;.deployment;deploy.cmd"
   IF !ERRORLEVEL! NEQ 0 goto error
