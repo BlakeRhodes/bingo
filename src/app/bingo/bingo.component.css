@@ -1,0 +1,12 @@
+.grid-container {
+  align-self: center;
+  display: grid;
+  grid-column-gap: 50px;
+  grid-template-columns: auto auto auto auto auto;
+  width: 80%
+}
+
+.letter {
+  font-size: xx-large;
+  text-align: center;
+}

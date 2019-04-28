@@ -1,0 +1,14 @@
+.textSquare{
+  width: 100%;
+  border: 3px solid darkred;
+  word-wrap: break-word;
+  height: 100%;
+}
+
+.marked{
+  width: 100%;
+  word-wrap: break-word;
+  border: 3px solid darkred;
+  height: 100%;
+  background: darkcyan;
+}
