@@ -26,7 +26,8 @@ export class SquareComponent implements OnInit {
 
     dialogConfig.disableClose = true;
     dialogConfig.autoFocus = true;
-    dialogConfig.height = '25%';
+    dialogConfig.height = '15%';
+    dialogConfig.width = '60%';
     dialogConfig.data = {description: this.textValue};
 
     const dialogRef = this.dialog.open(EditDialogComponent, dialogConfig);

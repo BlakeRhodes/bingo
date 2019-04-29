@@ -1,18 +1,17 @@
-<h2 mat-dialog-title>Edit</h2>
-<mat-dialog-content [formGroup]="form">
+  <mat-dialog-content [formGroup]="form">
+    <mat-form-field class="fill-parent">
+      <label mat-card-title>Write Something Clever</label>
+      <input class="card-content" matInput
+             formControlName="description"
+             (keydown.enter)="save()">
+    </mat-form-field>
 
-  <mat-form-field>
-    <label>Write Something Clever</label>
-    <input matInput
-           formControlName="description"
-           (keydown.enter)="save()">
-  </mat-form-field>
-
-</mat-dialog-content>
-<mat-dialog-actions>
-  <button class="mat-raised-button" (click)="close()">Close</button>
-  <button class="mat-raised-button mat-primary"
-          (click)="save()">
-    Save
-  </button>
-</mat-dialog-actions>
+  </mat-dialog-content>
+  <mat-dialog-actions>
+    <button class="mat-raised-button" (click)="close()">
+      Close
+    </button>
+    <button class="mat-raised-button mat-primary" (click)="save()">
+      Save
+    </button>
+  </mat-dialog-actions>
