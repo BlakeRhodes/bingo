@@ -1,8 +1,7 @@
 .grid-container {
   align-self: center;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-  display:-ms-grid;
+  grid-template-columns: repeat(5, 1fr);
 }
 
 .letter {
