@@ -1,0 +1,14 @@
+@import "~src/styles";
+.card-content {
+  border: 3px solid $accent;
+  word-wrap: break-word;
+}
+
+.textSquare{
+  @extend .card-content;
+}
+
+.marked{
+  @extend .card-content;
+  background: $warn;
+}

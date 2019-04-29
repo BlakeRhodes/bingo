@@ -5,7 +5,7 @@ import {EditDialogComponent} from '../edit-dialog/edit-dialog.component';
 @Component({
   selector: 'app-square',
   templateUrl: './square.component.html',
-  styleUrls: ['./square.component.css']
+  styleUrls: ['./square.component.scss']
 })
 export class SquareComponent implements OnInit {
   @Input() textValue: string;
